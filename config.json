@@ -1,12 +1,18 @@
 {
     "TargetLaptops": [
-        "10.2.20.156"
+        "127.0.0.1"
     ],
     "SourcePaths": [
         "C$\\Users\\Public\\Desktop\\*.sb3",
         "C$\\Users\\Public\\Documents\\Projektordner",
         "C$\\Benutzer\\Öffentlich\\Desktop\\*.sb3",
-        "C$\\Benutzer\\Öffentlich\\Dokumente\\Projektordner"
+        "C$\\Benutzer\\Öffentlich\\Dokumente\\Projektordner",
+        "C$\\Users\\*\\Desktop\\*.sb3",
+        "C$\\Users\\*\\Documents\\Projektordner",
+        "C$\\Benutzer\\*\\Desktop\\*.sb3",
+        "C$\\Benutzer\\*\\Dokumente\\Projektordner",
+        "C$\\Users\\*\\*\\Desktop\\*.sb3",
+        "C$\\Users\\*\\*\\Documents\\Projektordner"
     ],
     "LocalTargetDir": "C:\\LapFetch_Downloads"
 }
