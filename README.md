@@ -14,3 +14,14 @@ Szenario angelehnt an die Schnuppertage in der Firma: Schnupperlernende erstelle
 - **Konfigurierbar:** welche Pfade abgeholt werden, soll nicht fix im Skript stehen.
 
 - **Fehlerbehandlung:** Skript soll nicht abstürzen, wenn etwas failed (Gerät nicht erreichbar, Datei fehlt etc...). Am Ende soll eine Übersicht ausgegeben werden, was nicht funktioniert hat.
+
+#### Voraussetzungen:
+- **Main Laptop:** man muss auf seinem Mainlaptop mindestens einmal diesen Command pro Laptop ausführen und natürlich auch die Details anpassen:
+```powershell
+net use * /delete /y
+New-SmbMapping -RemotePath "\\10.2.20.xxx\C$" -UserName "TargetLaptopAdminUsername" -Password ""
+```
+- **Target Laptop:** man muss auf dem Targetlaptop diesen Befehl ausführen:
+```powershell
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name "LimitBlankPasswordUse" -Value 0 -Force
+```
